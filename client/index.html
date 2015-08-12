@@ -4,13 +4,15 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../client/stylesheets/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 	<script src="../server/controllers/app.js"></script>
 </head>
 <body ng-app="UAfitnessAPI" ng-controller="MainCtrl">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-
+				<ui-view></ui-view>
+				
 				<div class="page-header">
 					<h1>RIVAL<small>UNDER ARMOUR <span>X</span> MAP MY FITNESS</small></h1>
 				</div>
@@ -38,7 +40,9 @@
 					</div>
 					<button type="submit" class="btn btn-danger">POST</button>
 				</form>
+				<script type="text/ng-template" id="/home.html">
 
+				</script>
 			</div>
 		</div>
 	</div>
