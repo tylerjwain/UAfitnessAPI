@@ -1,3 +1,22 @@
 * {
 	/*border: 1px solid red;*/
+	font-family: Source Sans Pro;
+}
+
+.page-header {
+	font-family: Aquatico;
+}
+
+.page-header span {
+	color: #ff0303;
+}
+
+.btn-danger {
+	background: #ff0303
+}
+
+.btn-danger:hover {
+	background: none;
+	border: 2px solid #ff0303;
+	color: #ff0303;
 }
