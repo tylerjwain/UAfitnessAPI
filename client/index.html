@@ -2,53 +2,16 @@
 <head>
 	<title>Under Armour Fitness | 2015</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../client/stylesheets/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-	<script src="../server/controllers/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="./controllers/app.js"></script>
 </head>
-<body ng-app="UAfitnessAPI" ng-controller="MainCtrl">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<ui-view></ui-view>
-				
-				<div class="page-header">
-					<h1>RIVAL<small>UNDER ARMOUR <span>X</span> MAP MY FITNESS</small></h1>
-				</div>
+<body ng-app="UAfitnessAPI">
+	<div ui-view></div>
 
-				<div ng-repeat="post in posts | orderBy:'-upvotes'">
-					<span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
-						{{post.upvotes}}
-					<span>
-						<a ng-show="post.link" href="{{post.link}}">
-							{{post.title}}
-						</a>
-						<span ng-hide="post.link">
-							{{post.title}}
-						</span>
-					</span>
-				</div>
-
-				<form ng-submit="addPost()">
-					<h3>ADD POST</h3>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
-					</div>
-					<button type="submit" class="btn btn-danger">POST</button>
-				</form>
-				<script type="text/ng-template" id="/home.html">
-
-				</script>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-			</div>
-		</div>
-	</div>
+	<a ui-sref="partiala">Partial A</a>
+    <a ui-sref="partialb">Partial B</a>
 </body>
 </html>
