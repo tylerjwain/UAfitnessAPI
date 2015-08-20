@@ -1,17 +1,30 @@
 var app = angular.module('UAfitnessAPI', ['ui.router']);
 
+var number = 1;
+
 app.controller("PartialAController", function($scope, $state)
 {
+	$scope.number = number;
 	$scope.obj = {"Message" : "Hello World"};
 });
+
 app.controller("PartialBController", function($scope, $state)
 {
 	$scope.obj = {"Message" : "My Message"};
 
 	$scope.goToPartialA = function()
 	{
-		$state.go('partiala');
-	}
+		$scope.obj= {"Message" : "I love you"};
+		number = number + 1;
+		$scope.number = number;
+	};
+
+	$scope.stuff = function()
+	{
+		$scope.obj= {"Message" : "Go Away"};
+		number = number + 1;
+		$scope.number = number;
+	};
 });
 
 app.config(function($stateProvider, $urlRouterProvider)
