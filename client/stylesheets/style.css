@@ -1,22 +1,237 @@
 * {
 	/*border: 1px solid red;*/
 	font-family: Source Sans Pro;
+	text-transform: uppercase;
 }
 
-.page-header {
-	font-family: Aquatico;
+h1, h2, h3, h4, h5, h6, p, a {
+	margin: none;
+	padding: none;
 }
 
-.page-header span {
-	color: #ff0303;
+/*--------------------  NAVBAR  --------------------*/
+.navbar-brand {
+	font-weight: 500;
+	font-size: 3vw;
 }
 
-.btn-danger {
-	background: #ff0303
+.navbar li {
+	font-weight: 400;
+	font-size: 1.5vw;
 }
 
-.btn-danger:hover {
-	background: none;
-	border: 2px solid #ff0303;
-	color: #ff0303;
+	.navbar ul.member-actions li a:hover {
+		color: #FF5274;
+	}
+
+	.navbar ul.member-nav li a:hover {
+		color: #FF5274;
+	}
+
+	.navbar .member-actions {
+		position: absolute;
+		right: 0;
+	}
+
+/*Header/Footer Background*/
+.topo {
+	background: url('../images/UA_bg_1.png') center center;
+	height: 100px;
 }
+
+body {
+	background: url('../images/UA_bg_2.png');
+}
+
+	.hero-content {
+		font-family: Aquatico;
+		text-align: center;
+		height: 200px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		margin-top: -200px;
+	}
+
+		.hero-content h1 {
+			font-size: 10vw;
+			color: white;
+		}
+
+	.top {
+		height: 400px;
+	}
+
+		.top h1 {
+			font-size: 5vw;
+		}
+
+		.top h1 span {
+			font-size: 10vw;
+			color: #5DCAE7;
+		}
+
+	.feature-list {
+		height: 600px;
+	}
+
+		.feature-list h2 {
+			font-size: 2.5vw;
+		}
+
+		.feature-list h2 span {
+			font-size: 5vw;
+			color: #5DCAE7;
+		}
+
+	.centerTxt {
+		text-align: center;
+	}
+
+/*--------------------  Dashboard Specific Style  --------------------*/
+.dashboardImg {
+	background: url('../images/mountains.jpg') center center fixed;
+	size: auto;
+	position: relative;
+	height: 700px;
+}
+
+/*--------------------  Discover Specific Style  --------------------*/
+.discoverImg {
+	background: url('../images/run_2.jpg') top center fixed;
+	size: auto;
+	position: relative;
+	height: 700px;	
+}
+
+	.discover .intro {
+		padding-top: 200px;
+	}
+
+	.discover p {
+		font-size: 2vw;
+		padding-bottom: 200px;
+	}
+
+	.create, .explore {
+		height: auto;
+		width: 50%;
+	}
+
+	.create, .explore {
+		background: rgba(93, 202, 231, 0.5);
+	}
+
+		.create:hover, .explore:hover {
+			background: rgba(93, 202, 231, 1);
+		}
+
+	.create h4, .explore h4 {
+		padding: 200px 0px;
+	}
+
+/*--------------------  More Specific Style  --------------------*/
+.feature-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.feature-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+	.feature-heading {
+		margin-top: 120px;
+	}
+}
+
+.feature-intro {
+	padding-top: 75px;
+}
+
+	.feature-intro h3 {
+		margin-bottom: 70px;
+	}
+
+	.feature-intro .leftcol {
+		padding-right: 50px;
+	}
+
+	.feature-intro .centercol {
+		padding: 0px 50px;
+		border-left: solid 1px black;
+		border-right: solid 1px black;
+	}
+
+	.feature-intro .rightcol {
+		padding-left: 50px;
+	}
+
+.section-padding {
+	padding: 120px 0;
+}
+
+
+/*--------------------  FOOTER  --------------------*/
+footer {
+	background-color: #3D4351;
+	position: relative;
+}
+
+	footer p {
+		color: #ACB1B4;
+		font-size: 13px;
+	}
+
+	footer a {
+		color: white;
+	}
+
+		footer a:hover {
+			color: #FF5274;
+		}
+
+	footer .footer-links {
+		margin: 75px 0px;
+	}
+
+	footer ul.footer-group li {
+		display: inline-block;
+		margin-right: 30px;
+	}
+
+		footer ul.footer-group li a:hover {
+			color: #FF5274;
+		}
+
+	footer ul.footer-group li:last-child {
+		margin-right: 0;
+	}
+
+
+

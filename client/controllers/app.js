@@ -2,16 +2,22 @@ var app = angular.module('UAfitnessAPI', ['ui.router']);
 
 app.controller("PartialAController", function($scope, $state)
 {
-	$scope.obj = {"Message" : "Hello World"};
+	$scope.obj = {"Message" : "Welcome to Partial A"};
 });
+
 app.controller("PartialBController", function($scope, $state)
 {
-	$scope.obj = {"Message" : "My Message"};
+	$scope.obj = {"Message" : "Welcome to Partial B"};
 
 	$scope.goToPartialA = function()
 	{
 		$state.go('partiala');
 	}
+});
+
+app.controller("PartialCController", function($scope, $state)
+{
+	$scope.obj = {"Message" : "Welcome to Partial C"};
 });
 
 app.config(function($stateProvider, $urlRouterProvider)
@@ -43,5 +49,13 @@ app.config(function($stateProvider, $urlRouterProvider)
 			url: '/partialb',
 			templateUrl: './partials/partialb.html',
 			controller: 'PartialBController'
+		})
+
+		.state("partialc", 
+		{
+			url: '/partialc',
+			templateUrl: './partials/partialc.html',
+			controller: 'PartialCController'
 		});
+		
 });
