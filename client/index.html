@@ -1,17 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Under Armour API | Angular">
+    <meta name="author" content="Tyler Wain">
+
 	<title>Under Armour Fitness | 2015</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" type="text/css" href="./stylesheets/normalize.min.css">
+
+    <!-- Local CSS -->
 	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./javascripts/bootstrap.min.js"></script>
+    
+    <!-- Angular -->
+    <script src="./javascripts/angular.min.js"></script>
+    <script src="./javascripts/angular-ui-router.min.js"></script>
 	<script src="./controllers/app.js"></script>
 </head>
 <body ng-app="UAfitnessAPI">
+
+    <nav class="navbar navbar-default navbar-fixed-top topo">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/home">RIVAL</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav member-nav">
+                    <li><a ui-sref="partiala">DASHBOARD</a></li>
+                    <li><a ui-sref="partialb">DISCOVER</a></li>
+                    <li><a ui-sref="partialc">MORE</a></li>
+                </ul>
+                 <ul class="nav navbar-nav member-actions">
+                    <li><a href="#" class="login">Log in</a></li>
+                    <li><a href="#" class="btn-white btn-small">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 	<div ui-view></div>
 
-	<a ui-sref="partiala">Partial A</a>
-    <a ui-sref="partialb">Partial B</a>
+    <footer>
+        <div class="container">
+            <div class="row footer-links">
+                <ul class="footer-group">
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
